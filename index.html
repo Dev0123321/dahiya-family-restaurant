@@ -21,7 +21,7 @@
     <i class="fa-solid fa-moon"></i>
   </button>
 
-  <a class="floating-order" href="#contact" aria-label="Order Now">Order Now</a>
+  <a class="floating-order" href="#order" aria-label="Order Now">Order Now</a>
 
   <header class="hero" id="home">
     <nav class="navbar" id="navbar">
@@ -35,11 +35,16 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Online Order</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Customer Reviews</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="cart-toggle" id="openCart" aria-label="Open cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartCount">0</span>
+      </button>
     </nav>
 
     <div class="hero-content reveal">
@@ -49,7 +54,7 @@
       <div class="hero-buttons">
         <a href="#menu" class="btn btn-primary">View Menu</a>
         <a href="#contact" class="btn btn-secondary">Book Table</a>
-        <a href="#contact" class="btn btn-outline">Order Online</a>
+        <a href="#order" class="btn btn-outline">Order Online</a>
       </div>
     </div>
   </header>
@@ -118,10 +123,10 @@
             <img loading="lazy" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80" alt="Haryanvi Special dishes" />
             <div>
               <h3>Haryanvi Special</h3>
-              <ul>
-                <li>Bajra Roti</li>
-                <li>Sarson ka Saag</li>
-                <li>Desi Ghee Churma</li>
+              <ul class="menu-items">
+                <li><span class="dish-name">Bajra Roti</span><span class="dish-price">₹40</span><button class="add-btn add-to-cart" data-name="Bajra Roti" data-price="40">Add to Cart</button></li>
+                <li><span class="dish-name">Sarson ka Saag</span><span class="dish-price">₹180</span><button class="add-btn add-to-cart" data-name="Sarson ka Saag" data-price="180">Add to Cart</button></li>
+                <li><span class="dish-name">Desi Ghee Churma</span><span class="dish-price">₹140</span><button class="add-btn add-to-cart" data-name="Desi Ghee Churma" data-price="140">Add to Cart</button></li>
               </ul>
             </div>
           </article>
@@ -130,10 +135,10 @@
             <img loading="lazy" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80" alt="North Indian dishes" />
             <div>
               <h3>North Indian</h3>
-              <ul>
-                <li>Butter Chicken</li>
-                <li>Paneer Butter Masala</li>
-                <li>Dal Makhani</li>
+              <ul class="menu-items">
+                <li><span class="dish-name">Butter Chicken</span><span class="dish-price">₹320</span><button class="add-btn add-to-cart" data-name="Butter Chicken" data-price="320">Add to Cart</button></li>
+                <li><span class="dish-name">Paneer Butter Masala</span><span class="dish-price">₹260</span><button class="add-btn add-to-cart" data-name="Paneer Butter Masala" data-price="260">Add to Cart</button></li>
+                <li><span class="dish-name">Dal Makhani</span><span class="dish-price">₹220</span><button class="add-btn add-to-cart" data-name="Dal Makhani" data-price="220">Add to Cart</button></li>
               </ul>
             </div>
           </article>
@@ -142,10 +147,10 @@
             <img loading="lazy" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Tandoor dishes" />
             <div>
               <h3>Tandoor</h3>
-              <ul>
-                <li>Tandoori Roti</li>
-                <li>Naan</li>
-                <li>Tandoori Chicken</li>
+              <ul class="menu-items">
+                <li><span class="dish-name">Tandoori Roti</span><span class="dish-price">₹20</span><button class="add-btn add-to-cart" data-name="Tandoori Roti" data-price="20">Add to Cart</button></li>
+                <li><span class="dish-name">Naan</span><span class="dish-price">₹45</span><button class="add-btn add-to-cart" data-name="Naan" data-price="45">Add to Cart</button></li>
+                <li><span class="dish-name">Tandoori Chicken</span><span class="dish-price">₹360</span><button class="add-btn add-to-cart" data-name="Tandoori Chicken" data-price="360">Add to Cart</button></li>
               </ul>
             </div>
           </article>
@@ -154,10 +159,10 @@
             <img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Fast food" />
             <div>
               <h3>Fast Food</h3>
-              <ul>
-                <li>Burgers</li>
-                <li>Sandwiches</li>
-                <li>French Fries</li>
+              <ul class="menu-items">
+                <li><span class="dish-name">Burger</span><span class="dish-price">₹130</span><button class="add-btn add-to-cart" data-name="Burger" data-price="130">Add to Cart</button></li>
+                <li><span class="dish-name">Sandwich</span><span class="dish-price">₹120</span><button class="add-btn add-to-cart" data-name="Sandwich" data-price="120">Add to Cart</button></li>
+                <li><span class="dish-name">French Fries</span><span class="dish-price">₹110</span><button class="add-btn add-to-cart" data-name="French Fries" data-price="110">Add to Cart</button></li>
               </ul>
             </div>
           </article>
@@ -166,13 +171,13 @@
             <img loading="lazy" src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?auto=format&fit=crop&w=900&q=80" alt="Drinks and beverages" />
             <div>
               <h3>Drinks</h3>
-              <ul>
-                <li>Sweet / Salted Lassi</li>
-                <li>Masala Tea</li>
-                <li>Coffee</li>
-                <li>Mango Shake</li>
-                <li>Chocolate Shake</li>
-                <li>Cold Drinks</li>
+              <ul class="menu-items">
+                <li><span class="dish-name">Sweet / Salted Lassi</span><span class="dish-price">₹90</span><button class="add-btn add-to-cart" data-name="Sweet / Salted Lassi" data-price="90">Add to Cart</button></li>
+                <li><span class="dish-name">Masala Tea</span><span class="dish-price">₹40</span><button class="add-btn add-to-cart" data-name="Masala Tea" data-price="40">Add to Cart</button></li>
+                <li><span class="dish-name">Coffee</span><span class="dish-price">₹80</span><button class="add-btn add-to-cart" data-name="Coffee" data-price="80">Add to Cart</button></li>
+                <li><span class="dish-name">Mango Shake</span><span class="dish-price">₹120</span><button class="add-btn add-to-cart" data-name="Mango Shake" data-price="120">Add to Cart</button></li>
+                <li><span class="dish-name">Chocolate Shake</span><span class="dish-price">₹140</span><button class="add-btn add-to-cart" data-name="Chocolate Shake" data-price="140">Add to Cart</button></li>
+                <li><span class="dish-name">Cold Drinks</span><span class="dish-price">₹60</span><button class="add-btn add-to-cart" data-name="Cold Drinks" data-price="60">Add to Cart</button></li>
               </ul>
             </div>
           </article>
@@ -184,6 +189,10 @@
             <div>
               <h3>Lassi</h3>
               <p>Fresh curd lassi served chilled in traditional style.</p>
+              <div class="drink-meta">
+                <span>₹90</span>
+                <button class="add-btn add-to-cart" data-name="Sweet / Salted Lassi" data-price="90">Add to Cart</button>
+              </div>
             </div>
           </article>
           <article class="drink-item reveal">
@@ -191,6 +200,10 @@
             <div>
               <h3>Masala Tea</h3>
               <p>Kadak tea brewed with aromatic Indian spices.</p>
+              <div class="drink-meta">
+                <span>₹40</span>
+                <button class="add-btn add-to-cart" data-name="Masala Tea" data-price="40">Add to Cart</button>
+              </div>
             </div>
           </article>
           <article class="drink-item reveal">
@@ -198,6 +211,10 @@
             <div>
               <h3>Mango Shake</h3>
               <p>Seasonal mango shake made with thick milk and pulp.</p>
+              <div class="drink-meta">
+                <span>₹120</span>
+                <button class="add-btn add-to-cart" data-name="Mango Shake" data-price="120">Add to Cart</button>
+              </div>
             </div>
           </article>
           <article class="drink-item reveal">
@@ -205,6 +222,10 @@
             <div>
               <h3>Chocolate Shake</h3>
               <p>Creamy chocolate shake topped with a rich finish.</p>
+              <div class="drink-meta">
+                <span>₹140</span>
+                <button class="add-btn add-to-cart" data-name="Chocolate Shake" data-price="140">Add to Cart</button>
+              </div>
             </div>
           </article>
         </div>
@@ -276,6 +297,45 @@
       </div>
     </section>
 
+    <section id="order" class="section order">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Online Ordering</h2>
+          <p>Add items to cart and place your order instantly on WhatsApp.</p>
+        </div>
+        <div class="order-grid">
+          <article class="order-summary-card reveal">
+            <h3>Cart Summary</h3>
+            <ul id="checkoutItems" class="checkout-items">
+              <li class="empty">Your cart is empty. Add items from menu.</li>
+            </ul>
+            <p class="checkout-total">Total: <strong id="checkoutTotal">₹0</strong></p>
+          </article>
+
+          <article class="order-form-card reveal">
+            <h3>Customer Details</h3>
+            <form id="orderForm" novalidate>
+              <label for="orderName">Full Name</label>
+              <input id="orderName" name="orderName" type="text" placeholder="Enter your name" required />
+
+              <label for="orderPhone">Phone Number</label>
+              <input id="orderPhone" name="orderPhone" type="tel" placeholder="Enter 10-digit phone number" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" required />
+
+              <label for="orderAddress">Delivery Address / Pickup Note</label>
+              <textarea id="orderAddress" name="orderAddress" rows="3" placeholder="Village/City, landmark, or mention pickup at restaurant" required></textarea>
+
+              <label for="orderNotes">Extra Notes</label>
+              <textarea id="orderNotes" name="orderNotes" rows="2" placeholder="Less spicy, no onion, extra chutney, etc."></textarea>
+
+              <button type="submit" class="btn btn-primary">Place Order on WhatsApp</button>
+              <button type="button" id="clearCart" class="btn order-clear-btn">Clear Cart</button>
+              <p id="orderStatus" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section contact">
       <div class="container contact-grid">
         <div class="contact-left reveal">
@@ -312,6 +372,21 @@
     </section>
   </main>
 
+  <div id="cartOverlay" class="cart-overlay"></div>
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="cart-panel-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul id="cartItems" class="cart-items">
+      <li class="empty">No items added yet.</li>
+    </ul>
+    <div class="cart-panel-footer">
+      <p>Total: <strong id="cartTotal">₹0</strong></p>
+      <a href="#order" id="checkoutLink" class="btn btn-primary">Go to Online Order</a>
+    </div>
+  </aside>
+
   <footer class="footer">
     <div class="container footer-grid">
       <div>
@@ -323,6 +398,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Online Order</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

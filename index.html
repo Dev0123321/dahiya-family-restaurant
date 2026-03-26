@@ -36,7 +36,6 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#order">Online Order</a></li>
-        <li><a href="#upi">UPI Payment</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Customer Reviews</a></li>
         <li><a href="#location">Location</a></li>
@@ -442,42 +441,6 @@
       </div>
     </section>
 
-    <section id="upi" class="section upi-section">
-      <div class="container">
-        <div class="section-title reveal">
-          <h2>UPI Scanner Payment</h2>
-          <p>Scan this QR code from any UPI app to pay directly.</p>
-        </div>
-
-        <article class="upi-card reveal" aria-label="UPI scanner card">
-          <p class="upi-name">Dev</p>
-          <p class="upi-id" id="upiIdText">9996183360@kotak811</p>
-
-          <img
-            id="upiQrImage"
-            class="upi-qr"
-            src="upi-scanner.png"
-            data-src-secondary="https://api.qrserver.com/v1/create-qr-code/?size=520x520&amp;data=upi%3A%2F%2Fpay%3Fpa%3D9996183360%40kotak811%26pn%3DDev%26cu%3DINR"
-            data-src-tertiary="https://chart.googleapis.com/chart?cht=qr&amp;chs=520x520&amp;chl=upi%3A%2F%2Fpay%3Fpa%3D9996183360%40kotak811%26pn%3DDev%26cu%3DINR"
-            alt="UPI QR code for Dev"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <p class="upi-help" id="upiQrStatus" role="status" aria-live="polite"></p>
-
-          <div class="upi-actions">
-            <button type="button" id="copyUpiButton" class="btn btn-primary">Copy UPI ID</button>
-            <a
-              class="btn btn-secondary"
-              href="upi://pay?pa=9996183360@kotak811&amp;pn=Dev&amp;cu=INR"
-              aria-label="Open UPI app for payment"
-            >Open UPI App</a>
-          </div>
-          <p class="upi-help" id="upiCopyStatus" role="status" aria-live="polite"></p>
-        </article>
-      </div>
-    </section>
 
     <section id="contact" class="section contact">
       <div class="container contact-grid">
